@@ -3,7 +3,6 @@ class OpenBrain < Formula
   homepage "https://github.com/cbolden15/open-brain"
   url "https://github.com/cbolden15/open-brain/releases/download/v0.1.0/open-brain-component-manifest-v1.txt",
       using: :nounzip
-  version "0.1.0"
   sha256 "7434b680420c9bbfdec036a146a5f7567f52357d0a27a868ea65a1b65e4704fb"
   license "Apache-2.0"
 
@@ -34,17 +33,17 @@ class OpenBrain < Formula
   def install
     resource("base").stage do
       bin.install "open-brain"
-      (share/"open-brain/obsidian-plugin").install Dir["obsidian-plugin/*"]
+      (pkgshare/"obsidian-plugin").install Dir["obsidian-plugin/*"]
     end
     resource("graphify").stage do
       libexec.install "open-brain" => "open-brain-graphify"
-      (share/"open-brain/licenses/graphify").install Dir["licenses/graphify/*"]
+      (pkgshare/"licenses/graphify").install Dir["licenses/graphify/*"]
     end
   end
 
   test do
     assert_match "open-brain #{version}", shell_output("#{bin}/open-brain --version")
-    assert_path_exists share/"open-brain/obsidian-plugin/main.js"
+    assert_path_exists pkgshare/"obsidian-plugin/main.js"
     assert_match "open-brain-graphify-helper-v1", shell_output("#{libexec}/open-brain-graphify --capabilities")
   end
 end
