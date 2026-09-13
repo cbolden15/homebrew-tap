@@ -1,7 +1,10 @@
 class OpenBrain < Formula
   desc "Local-first capture, search, and portable export"
   homepage "https://github.com/cbolden15/open-brain"
+  url "https://github.com/cbolden15/open-brain/releases/download/v0.1.0/open-brain-component-manifest-v1.txt",
+      using: :nounzip
   version "0.1.0"
+  sha256 "7434b680420c9bbfdec036a146a5f7567f52357d0a27a868ea65a1b65e4704fb"
   license "Apache-2.0"
 
   on_macos do
