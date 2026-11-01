@@ -1,40 +1,40 @@
 class OpenBrain < Formula
   desc "Local-first capture, search, and portable export"
   homepage "https://github.com/cbolden15/open-brain"
-  url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-component-manifest-v1.txt",
+  url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-component-manifest-v1.txt",
       using: :nounzip
-  sha256 "2f2c91953bbe447f88e96b3e541d3ed3bc303ba123bbc0fa6ca27b15554ffd36"
+  sha256 "e8fdd969c65dc770cbe14b495af0bce4394667ddac0c53ad144ade6cf0d918af"
   license "Apache-2.0"
 
   on_macos do
     depends_on arch: :arm64
     resource "base" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-0.2.0-macos-arm64.tar.gz"
-      sha256 "c7bbf84488445347ae65904c7569c9168d0cda0bb888eef49922431e8623d754"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-0.2.1-macos-arm64.tar.gz"
+      sha256 "2135b3d03e4b9eb3e843da68a67c29704440ed2b669d65f440b0c2f44d1c54bf"
     end
     resource "graphify" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-graphify-0.2.0-macos-arm64.tar.gz"
-      sha256 "6b1bcd06d77fea66fd89148e645f13585fcf19061ec38e713c5cb04f683dd5ff"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-graphify-0.2.1-macos-arm64.tar.gz"
+      sha256 "3b0602919bfe93003667630c32bbab477676c6ef567e0d94e0ec776cfd08b6ed"
     end
     resource "harness" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-harness-0.2.0-macos-arm64.tar.gz"
-      sha256 "692c1f778151ed4f0d6d5c5f85f80d73ae3931205bfa9d376cd90da8ff458ef5"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-harness-0.2.1-macos-arm64.tar.gz"
+      sha256 "6284caf76935d217a1da6c51ce9630a4eb9b57911a67b9c38b64885f5e133199"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
     resource "base" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-0.2.0-linux-x86_64.tar.gz"
-      sha256 "5cbd0927f0a015e1a08b359939b57a7d4551eeb48e40d59e85b656d7f95df64e"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-0.2.1-linux-x86_64.tar.gz"
+      sha256 "4277cff472cee9334250ed4514cee05fa5ef9c612effa5a28a7371baec96445c"
     end
     resource "graphify" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-graphify-0.2.0-linux-x86_64.tar.gz"
-      sha256 "1eade24b16949744ffb64dc4e1f9a294773232972b5e8b03b8b8877c0ceca728"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-graphify-0.2.1-linux-x86_64.tar.gz"
+      sha256 "adbec8edbfbe5afa01112a0040a10e7f838b1a38415169c889152c1e0d47c697"
     end
     resource "harness" do
-      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.0/open-brain-harness-0.2.0-linux-x86_64.tar.gz"
-      sha256 "5ddea62a9250308c921c988d262025d2c05f6f72f2624fd260586945209ad5ec"
+      url "https://github.com/cbolden15/open-brain/releases/download/v0.2.1/open-brain-harness-0.2.1-linux-x86_64.tar.gz"
+      sha256 "2757f0994fd2731491ecb4b9d42eccc4dfa68cbaf5298c36d4345a5280d70fb0"
     end
   end
 
